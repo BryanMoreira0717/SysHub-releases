@@ -13,7 +13,7 @@ Tudo num app nativo, leve e bonito para Windows.
 
 <br>
 
-<img alt="Versão" src="https://img.shields.io/badge/versão-1.0.0-7C5CFF?style=flat-square">
+<img alt="Versão" src="https://img.shields.io/badge/versão-2.0.0-7C5CFF?style=flat-square">
 <img alt="Windows 10 e 11" src="https://img.shields.io/badge/Windows-10%20%7C%2011-3B6CFF?style=flat-square">
 <img alt=".NET 10" src="https://img.shields.io/badge/.NET-10-512BD4?style=flat-square">
 <img alt="WinUI 3" src="https://img.shields.io/badge/WinUI-3-0F6CBD?style=flat-square">
@@ -88,6 +88,36 @@ Tudo num app nativo, leve e bonito para Windows.
       Os sensores só são lidos quando alguma tela precisa deles. Minimizado na bandeja, o uso de CPU fica perto de 0%, e ele pode iniciar com o Windows sem pedir confirmação a cada logon.
     </td>
   </tr>
+  <tr>
+    <td valign="top">
+      <h3>🌈 Iluminação RGB <sup>novo</sup></h3>
+      LEDs da placa-mãe <b>ASUS AURA</b> (placa, headers RGB e ARGB) e periféricos com <b>Iluminação Dinâmica</b> do Windows 11, todos sincronizados. Os efeitos incluem um que segue a <b>temperatura da CPU</b>. Nada é gravado na placa: reiniciar volta ao efeito original.
+    </td>
+    <td valign="top">
+      <h3>🔥 Teste de estresse <sup>novo</sup></h3>
+      Todos os núcleos a 100% por 1, 5 ou 15 min, com temperatura e clock ao vivo. Detecta <i>throttling</i>, para sozinho no limite de temperatura e guarda os resultados para comparar depois de trocar a pasta térmica.
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <h3>🏁 Sessões de jogo <sup>novo</sup></h3>
+      Cada partida vira um relatório automático: tempo jogado, FPS médio, 1% low e temperaturas máximas de CPU e GPU.
+    </td>
+    <td valign="top">
+      <h3>⏱️ Tempo de inicialização <sup>novo</sup></h3>
+      Quanto o Windows leva até a área de trabalho e até ficar pronto, se está piorando e quais programas mais atrasam o boot.
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <h3>🌡️ Temperatura na bandeja <sup>novo</sup></h3>
+      A temperatura da CPU e da GPU ao lado do relógio, em amarelo a partir de 75 °C e vermelho a partir de 88 °C.
+    </td>
+    <td valign="top">
+      <h3>🚨 LEDs nos alertas <sup>novo</sup></h3>
+      Quando um alerta dispara (ex.: CPU acima de 90 °C), o gabinete pisca em vermelho por 10 segundos.
+    </td>
+  </tr>
 </table>
 
 ## 🎮 Overlay nos jogos
@@ -122,7 +152,7 @@ Claro, escuro ou seguindo o Windows, com **8 paletas**. Trocar é instantâneo, 
 
 ## ⬇️ Instalação
 
-1. **Baixe** o [`SysHubApp-win-Setup.exe`](https://github.com/BryanMoreira0717/SysHub-releases/releases/latest/download/SysHubApp-win-Setup.exe) (cerca de 48 MB) — ou veja todas as versões em [Releases](https://github.com/BryanMoreira0717/SysHub-releases/releases).
+1. **Baixe** o [`SysHubApp-win-Setup.exe`](https://github.com/BryanMoreira0717/SysHub-releases/releases/latest/download/SysHubApp-win-Setup.exe) (cerca de 85 MB).
 2. **Execute.** O SysHub é instalado só para o seu usuário e não precisa de .NET nem de mais nada.
 3. **Confirme o UAC** quando ele abrir. O app precisa de administrador para ler os sensores, gerenciar processos e a inicialização.
 
