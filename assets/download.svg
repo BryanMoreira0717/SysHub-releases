@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="96" viewBox="0 0 420 96" role="img" aria-label="Baixar o SysHub para Windows">
+  <defs>
+    <linearGradient id="glow" x1="0" x2="1">
+      <stop offset="0" stop-color="#4f7bff"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <filter id="blur" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="9"/></filter>
+  </defs>
+  <style>
+    text { font-family: "Segoe UI Variable Display", "Segoe UI", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif; }
+    .halo { animation: halo 2.8s ease-in-out infinite; }
+    @keyframes halo { 0%, 100% { opacity: .45; } 50% { opacity: .85; } }
+  </style>
+  <rect class="halo" x="24" y="22" width="372" height="52" rx="26" fill="url(#glow)" filter="url(#blur)"/>
+  <rect x="20" y="16" width="380" height="62" rx="31" fill="#f4f5f7"/>
+  <g transform="translate(52 33)" fill="#0b0c10">
+    <path d="M0 3.6 11.6 2v11.3H0zM13.2 1.8 28 0v13.3H13.2zM0 15h11.6v11.3L0 24.7zM13.2 15H28v13.3l-14.8-2z"/>
+  </g>
+  <text x="96" y="46" font-size="20" font-weight="650" fill="#0b0c10">Baixar para Windows</text>
+  <text x="96" y="66" font-size="13" fill="#4b5160">v1.0.0 · 48 MB · Windows 10 e 11 (64 bits)</text>
+</svg>

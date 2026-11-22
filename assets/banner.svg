@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420" role="img" aria-label="SysHub — seu PC inteiro, num só lugar">
+  <defs>
+    <radialGradient id="glowA" cx="22%" cy="30%" r="45%">
+      <stop offset="0" stop-color="#3b6cff" stop-opacity=".38"/>
+      <stop offset="1" stop-color="#3b6cff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="82%" cy="18%" r="45%">
+      <stop offset="0" stop-color="#8b5cf6" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="logo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3b6cff"/>
+      <stop offset="1" stop-color="#8b3ff2"/>
+    </linearGradient>
+    <linearGradient id="pulse" x1="0" x2="1">
+      <stop offset="0" stop-color="#3b6cff" stop-opacity="0"/>
+      <stop offset=".3" stop-color="#5b82ff"/>
+      <stop offset=".75" stop-color="#9b6bff"/>
+      <stop offset="1" stop-color="#9b6bff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="title" x1="0" x2="1">
+      <stop offset="0" stop-color="#9ab6ff"/>
+      <stop offset=".5" stop-color="#b39bff"/>
+      <stop offset="1" stop-color="#e0d6ff"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#fff" stroke-opacity=".05"/>
+    </pattern>
+    <radialGradient id="gridMask" cx="50%" cy="42%" r="60%">
+      <stop offset=".1" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="fade"><rect width="1280" height="420" fill="url(#gridMask)"/></mask>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10"/></filter>
+    <clipPath id="card"><rect width="1280" height="420" rx="28"/></clipPath>
+  </defs>
+  <style>
+    .draw { stroke-dasharray: 1400; stroke-dashoffset: 1400; animation: draw 3.2s cubic-bezier(.6,.1,.2,1) infinite; }
+    @keyframes draw { 0% { stroke-dashoffset: 1400; } 55%, 85% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -1400; } }
+    .chip { animation: chip 9s ease-in-out infinite backwards; }
+    .c2 { animation-delay: 3s; } .c3 { animation-delay: 6s; }
+    @keyframes chip { 0%, 100% { opacity: 0; transform: translateY(8px); } 8%, 30% { opacity: 1; transform: translateY(0); } 40% { opacity: 0; transform: translateY(-6px); } }
+    .beat { transform-origin: 152px 210px; animation: beat 1.6s ease-in-out infinite; }
+    @keyframes beat { 0%, 100% { transform: scale(1); } 12% { transform: scale(1.045); } 24% { transform: scale(.99); } 36% { transform: scale(1.02); } }
+    text { font-family: "Segoe UI Variable Display", "Segoe UI", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif; }
+    .mono { font-family: "Cascadia Mono", Consolas, "SF Mono", Menlo, monospace; }
+  </style>
+  <g clip-path="url(#card)">
+    <rect width="1280" height="420" fill="#07080b"/>
+    <rect width="1280" height="420" fill="url(#glowA)"/>
+    <rect width="1280" height="420" fill="url(#glowB)"/>
+    <rect width="1280" height="420" fill="url(#grid)" mask="url(#fade)"/>
+
+    <!-- logo -->
+    <g class="beat">
+      <rect x="88" y="146" width="128" height="128" rx="32" fill="url(#logo)" filter="url(#soft)" opacity=".55"/>
+      <rect x="88" y="146" width="128" height="128" rx="32" fill="url(#logo)"/>
+      <polyline points="112,212 136,212 146,186 160,240 172,200 178,212 192,212" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <text x="256" y="196" font-size="66" font-weight="700" fill="#f2f3f5" letter-spacing="-2">SysHub</text>
+    <text x="258" y="250" font-size="30" font-weight="600" fill="url(#title)" letter-spacing="-.6">Seu PC inteiro, num só lugar.</text>
+    <text x="258" y="290" font-size="18" fill="#a1a7b3">Hardware · overlay em jogos · bateria na bandeja · processos · histórico</text>
+
+    <!-- floating readings -->
+    <g class="chip c1">
+      <rect x="930" y="92" width="196" height="46" rx="23" fill="#ffffff" fill-opacity=".05" stroke="#9b8cff" stroke-opacity=".35"/>
+      <circle cx="956" cy="115" r="5" fill="#7cf0b2"/>
+      <text x="972" y="121" font-size="17" fill="#e8e9ff" class="mono">FPS  144</text>
+    </g>
+    <g class="chip c2">
+      <rect x="980" y="160" width="210" height="46" rx="23" fill="#ffffff" fill-opacity=".05" stroke="#9b8cff" stroke-opacity=".35"/>
+      <circle cx="1006" cy="183" r="5" fill="#ffc83d"/>
+      <text x="1022" y="189" font-size="17" fill="#e8e9ff" class="mono">CPU  54 °C</text>
+    </g>
+    <g class="chip c3">
+      <rect x="914" y="228" width="226" height="46" rx="23" fill="#ffffff" fill-opacity=".05" stroke="#9b8cff" stroke-opacity=".35"/>
+      <circle cx="940" cy="251" r="5" fill="#4cc2ff"/>
+      <text x="956" y="257" font-size="17" fill="#e8e9ff" class="mono">Fone  82%</text>
+    </g>
+
+    <!-- heartbeat -->
+    <path d="M0 352 H760 L792 352 L818 300 L850 398 L878 330 L896 352 H1280" fill="none" stroke="url(#pulse)" stroke-width="3" stroke-opacity=".25" stroke-linejoin="round"/>
+    <path class="draw" d="M0 352 H760 L792 352 L818 300 L850 398 L878 330 L896 352 H1280" fill="none" stroke="url(#pulse)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <rect x=".5" y=".5" width="1279" height="419" rx="27.5" fill="none" stroke="#fff" stroke-opacity=".08"/>
+  </g>
+</svg>

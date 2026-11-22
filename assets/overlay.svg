@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="560" viewBox="0 0 1280 560" role="img" aria-label="Três estilos do overlay do SysHub sobre uma cena de jogo: Clássico, Neon e Barras">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#120a2a"/>
+      <stop offset=".55" stop-color="#3b1654"/>
+      <stop offset=".8" stop-color="#a23a6e"/>
+      <stop offset="1" stop-color="#f08a5d"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd56b"/>
+      <stop offset="1" stop-color="#ff7a8a"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a0b24"/>
+      <stop offset="1" stop-color="#07040d"/>
+    </linearGradient>
+    <clipPath id="frame"><rect width="1280" height="560" rx="28"/></clipPath>
+    <clipPath id="sunClip"><rect x="0" y="0" width="1280" height="330"/></clipPath>
+    <clipPath id="sunShape"><circle cx="640" cy="270" r="150"/></clipPath>
+    <clipPath id="below"><rect x="0" y="330" width="1280" height="230"/></clipPath>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="6"/></filter>
+  </defs>
+  <style>
+    text { font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif; }
+    .mono { font-family: Consolas, "Cascadia Mono", "SF Mono", Menlo, monospace; }
+    .lbl { fill: #b8bec8; font-size: 15px; }
+    .val { fill: #fff; font-size: 18px; font-weight: 600; }
+    .acc { fill: #4cc2ff; }
+    .vio { fill: #b794f6; }
+    .alert { fill: #ff4d4f; }
+    .shadow { fill: #000; opacity: .75; }
+    .tick { opacity: 0; animation: tick 3s steps(1, end) infinite; }
+    .t1 { animation-delay: 0s; } .t2 { animation-delay: -1s; } .t3 { animation-delay: -2s; }
+    @keyframes tick { 0% { opacity: 1; } 33.33% { opacity: 0; } 100% { opacity: 0; } }
+    .grid { animation: run 1.4s linear infinite; }
+    @keyframes run { from { transform: translateY(0); } to { transform: translateY(46px); } }
+    .bar { transform-box: fill-box; transform-origin: left; animation: bar 3s ease-in-out infinite; }
+    .b2 { animation-delay: -1s; } .b3 { animation-delay: -2s; }
+    @keyframes bar { 0%, 100% { transform: scaleX(1); } 50% { transform: scaleX(.86); } }
+    .name { font-size: 16px; font-weight: 600; fill: #f2f3f5; letter-spacing: .4px; }
+  </style>
+  <g clip-path="url(#frame)">
+    <rect width="1280" height="560" fill="url(#sky)"/>
+    <g clip-path="url(#sunClip)">
+      <circle cx="640" cy="270" r="150" fill="url(#sun)"/>
+      <g clip-path="url(#sunShape)">
+      <rect x="480" y="236" width="320" height="7" fill="#a23a6e"/>
+      <rect x="480" y="262" width="320" height="10" fill="#a23a6e"/>
+      <rect x="480" y="290" width="320" height="13" fill="#a23a6e"/>
+      </g>
+    </g>
+    <path d="M0 330 L0 286 L110 250 L210 296 L330 236 L430 290 L520 268 L590 304 L690 300 L760 270 L850 300 L980 226 L1100 284 L1200 254 L1280 270 L1280 330 Z" fill="#1b0c2b"/>
+    <rect y="330" width="1280" height="230" fill="url(#ground)"/>
+    <!-- perspective grid -->
+    <g stroke="#ff5ac8" stroke-opacity=".55" stroke-width="1.5" clip-path="url(#below)">
+      <path d="M640 330 L-400 560 M640 330 L-100 560 M640 330 L160 560 M640 330 L400 560 M640 330 L640 560 M640 330 L880 560 M640 330 L1120 560 M640 330 L1380 560 M640 330 L1680 560"/>
+      <g class="grid">
+        <path d="M0 290 H1280 M0 336 H1280 M0 382 H1280 M0 428 H1280 M0 474 H1280 M0 520 H1280"/>
+      </g>
+    </g>
+    <rect y="330" width="1280" height="20" fill="#1a0b24" opacity=".85"/>
+
+    <!-- Classic -->
+    <g transform="translate(96 72)">
+      <rect width="190" height="128" rx="12" fill="#0b0c0f" fill-opacity=".62"/>
+      <text x="16" y="32" class="lbl">FPS</text>
+      <g text-anchor="end">
+        <g class="tick t1"><text x="175" y="33" class="val">144</text></g>
+        <g class="tick t2"><text x="175" y="33" class="val">151</text></g>
+        <g class="tick t3"><text x="175" y="33" class="val">139</text></g>
+        <text x="175" y="61" class="val">64 °C</text>
+        <text x="175" y="89" class="val">71 °C</text>
+        <text x="175" y="117" class="val alert">92%</text>
+      </g>
+      <text x="16" y="60" class="lbl">CPU</text>
+      <text x="16" y="88" class="lbl">GPU</text>
+      <text x="16" y="116" class="lbl">GPU %</text>
+      <text x="0" y="-18" class="name">Clássico</text>
+    </g>
+
+    <!-- Neon -->
+    <g transform="translate(96 372)">
+      <rect width="190" height="128" rx="10" fill="#0b0c0f" fill-opacity=".62"/>
+      <rect width="190" height="128" rx="10" fill="none" stroke="#4cc2ff" stroke-width="6" stroke-opacity=".35" filter="url(#glow)"/>
+      <rect x=".75" y=".75" width="188.5" height="126.5" rx="9.5" fill="none" stroke="#4cc2ff" stroke-width="1.5"/>
+      <text x="16" y="32" class="lbl acc" font-weight="600">FPS</text>
+      <text x="16" y="60" class="lbl acc" font-weight="600">CPU</text>
+      <text x="16" y="88" class="lbl acc" font-weight="600">GPU</text>
+      <text x="16" y="116" class="lbl acc" font-weight="600">GPU %</text>
+      <g text-anchor="end">
+        <g class="tick t2"><text x="175" y="33" class="val">147</text></g>
+        <g class="tick t3"><text x="175" y="33" class="val">152</text></g>
+        <g class="tick t1"><text x="175" y="33" class="val">141</text></g>
+        <text x="175" y="61" class="val">64 °C</text>
+        <text x="175" y="89" class="val">71 °C</text>
+        <text x="175" y="117" class="val">87%</text>
+      </g>
+      <text x="0" y="-18" class="name">Neon</text>
+    </g>
+
+    <!-- Bars -->
+    <g transform="translate(994 72)">
+      <rect width="190" height="178" rx="12" fill="#0b0c0f" fill-opacity=".62"/>
+      <text x="16" y="32" class="lbl">FPS</text>
+      <text x="16" y="72" class="lbl">CPU</text>
+      <text x="16" y="112" class="lbl">GPU</text>
+      <text x="16" y="152" class="lbl">GPU %</text>
+      <g text-anchor="end">
+        <g class="tick t3"><text x="175" y="33" class="val">144</text></g>
+        <g class="tick t1"><text x="175" y="33" class="val">149</text></g>
+        <g class="tick t2"><text x="175" y="33" class="val">138</text></g>
+        <text x="175" y="73" class="val">64 °C</text>
+        <text x="175" y="113" class="val">71 °C</text>
+        <text x="175" y="153" class="val">87%</text>
+      </g>
+      <rect x="16" y="81" width="159" height="3" fill="#fff" fill-opacity=".25"/>
+      <rect class="bar" x="16" y="81" width="102" height="3" fill="#b794f6"/>
+      <rect x="16" y="121" width="159" height="3" fill="#fff" fill-opacity=".25"/>
+      <rect class="bar b2" x="16" y="121" width="113" height="3" fill="#b794f6"/>
+      <rect x="16" y="161" width="159" height="3" fill="#fff" fill-opacity=".25"/>
+      <rect class="bar b3" x="16" y="161" width="138" height="3" fill="#b794f6"/>
+      <text x="0" y="-18" class="name">Barras</text>
+    </g>
+
+    <text x="1184" y="530" text-anchor="end" font-size="15" fill="#e9d7ff" fill-opacity=".7">+ Compacto, Minimalista e Pílulas · 8 cores de destaque · qualquer canto, qualquer monitor</text>
+    <rect x=".5" y=".5" width="1279" height="559" rx="27.5" fill="none" stroke="#fff" stroke-opacity=".1"/>
+  </g>
+</svg>
