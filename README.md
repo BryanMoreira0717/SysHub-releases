@@ -13,7 +13,7 @@ Tudo num app nativo, leve e bonito para Windows.
 
 <br>
 
-<img alt="Versão" src="https://img.shields.io/badge/versão-2.0.0-7C5CFF?style=flat-square">
+<img alt="Versão" src="https://img.shields.io/badge/versão-3.0.0-7C5CFF?style=flat-square">
 <img alt="Windows 10 e 11" src="https://img.shields.io/badge/Windows-10%20%7C%2011-3B6CFF?style=flat-square">
 <img alt=".NET 10" src="https://img.shields.io/badge/.NET-10-512BD4?style=flat-square">
 <img alt="WinUI 3" src="https://img.shields.io/badge/WinUI-3-0F6CBD?style=flat-square">
@@ -90,34 +90,35 @@ Tudo num app nativo, leve e bonito para Windows.
   </tr>
   <tr>
     <td valign="top">
-      <h3>🌈 Iluminação RGB <sup>novo</sup></h3>
-      LEDs da placa-mãe <b>ASUS AURA</b> (placa, headers RGB e ARGB) e periféricos com <b>Iluminação Dinâmica</b> do Windows 11, todos sincronizados. Os efeitos incluem um que segue a <b>temperatura da CPU</b>. Nada é gravado na placa: reiniciar volta ao efeito original.
+      <h3>🌈 Iluminação RGB <sup>novos efeitos</sup></h3>
+      LEDs da placa-mãe <b>ASUS AURA</b> (placa, headers RGB e ARGB) e periféricos com <b>Iluminação Dinâmica</b> do Windows 11, todos sincronizados. São 15 efeitos, incluindo os que entendem os seus fans (a luz <b>pula de fan em fan</b> ou <b>gira dentro de cada um</b>), fogo, aurora e um que segue a <b>temperatura da CPU</b>. Nada é gravado na placa: reiniciar volta ao efeito original.
     </td>
     <td valign="top">
-      <h3>🔥 Teste de estresse <sup>novo</sup></h3>
+      <h3>🔥 Teste de estresse</h3>
       Todos os núcleos a 100% por 1, 5 ou 15 min, com temperatura e clock ao vivo. Detecta <i>throttling</i>, para sozinho no limite de temperatura e guarda os resultados para comparar depois de trocar a pasta térmica.
     </td>
   </tr>
   <tr>
     <td valign="top">
-      <h3>🏁 Sessões de jogo <sup>novo</sup></h3>
+      <h3>🏁 Sessões de jogo</h3>
       Cada partida vira um relatório automático: tempo jogado, FPS médio, 1% low e temperaturas máximas de CPU e GPU.
     </td>
     <td valign="top">
-      <h3>⏱️ Tempo de inicialização <sup>novo</sup></h3>
+      <h3>⏱️ Tempo de inicialização</h3>
       Quanto o Windows leva até a área de trabalho e até ficar pronto, se está piorando e quais programas mais atrasam o boot.
     </td>
   </tr>
   <tr>
     <td valign="top">
-      <h3>🌡️ Temperatura na bandeja <sup>novo</sup></h3>
+      <h3>🌡️ Temperatura na bandeja</h3>
       A temperatura da CPU e da GPU ao lado do relógio, em amarelo a partir de 75 °C e vermelho a partir de 88 °C.
     </td>
     <td valign="top">
-      <h3>🚨 LEDs nos alertas <sup>novo</sup></h3>
+      <h3>🚨 LEDs nos alertas</h3>
       Quando um alerta dispara (ex.: CPU acima de 90 °C), o gabinete pisca em vermelho por 10 segundos.
     </td>
   </tr>
+<tr>    <td valign="top">      <h3>🕹️ Estilos de interface <sup>novo</sup></h3>      Não muda só a cor: <b>Retrô</b> (terminal de fósforo verde, fonte monoespaçada, cantos retos), <b>Gamer</b> (fonte condensada, cantos vivos, vermelho no grafite) e <b>Synthwave</b> (neon rosa e roxo). Além de 8 paletas para o visual padrão.    </td>    <td valign="top">      <h3>💽 Velocidade do disco <sup>novo</sup></h3>      Gravação e leitura sequenciais e leitura aleatória 4 KB (IOPS), medidas sem o cache do Windows, com avaliação do resultado: HD, SSD SATA ou NVMe.    </td>  </tr>
 </table>
 
 ## 🎮 Overlay nos jogos
@@ -148,7 +149,7 @@ Valores acima do limite que você define (ex.: CPU acima de 90 °C) ficam em ver
   <img src="assets/palettes.svg" alt="As oito paletas de cores do SysHub: Padrão, Oceano, Floresta, Pôr do sol, Ametista, Rubi, Grafite e Meia-noite" width="100%">
 </div>
 
-Claro, escuro ou seguindo o Windows, com **8 paletas**. Trocar é instantâneo, sem reiniciar. Um teste automático garante contraste de leitura (WCAG AA) em todas elas.
+Claro, escuro ou seguindo o Windows, com **8 paletas**, trocadas na hora. Para mudar mais que a cor, há três **estilos completos**: Retrô, Gamer e Synthwave, que trocam também as fontes e o formato dos cantos. Um teste automático garante contraste de leitura (WCAG AA) em todas as combinações.
 
 ## ⬇️ Instalação
 
