@@ -13,7 +13,7 @@ Tudo num app nativo, leve e bonito para Windows.
 
 <br>
 
-<img alt="Versão" src="https://img.shields.io/badge/versão-4.0.2-7C5CFF?style=flat-square">
+<img alt="Versão" src="https://img.shields.io/badge/versão-5.0.0-7C5CFF?style=flat-square">
 <img alt="Windows 10 e 11" src="https://img.shields.io/badge/Windows-10%20%7C%2011-3B6CFF?style=flat-square">
 <img alt=".NET 10" src="https://img.shields.io/badge/.NET-10-512BD4?style=flat-square">
 <img alt="WinUI 3" src="https://img.shields.io/badge/WinUI-3-0F6CBD?style=flat-square">
@@ -65,7 +65,7 @@ Tudo num app nativo, leve e bonito para Windows.
     </td>
     <td valign="top">
       <h3>🚀 Perfis por jogo</h3>
-      Quando o jogo abre, o overlay liga, vai para o canto escolhido e o plano de energia muda para “Alto desempenho”. Quando o jogo fecha, tudo volta ao que era.
+      Quando o jogo abre, o overlay liga, o plano de energia vai para “Alto desempenho”, os LEDs trocam de efeito e os programas que você escolher (Discord, navegador…) são fechados. Quando o jogo fecha, tudo volta ao que era.
     </td>
   </tr>
   <tr>
